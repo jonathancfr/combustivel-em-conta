@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "247764077631",
+    "firebase_url": "https://combustivel-em-conta-bf6d6.firebaseio.com",
+    "project_id": "combustivel-em-conta-bf6d6",
+    "storage_bucket": "combustivel-em-conta-bf6d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247764077631:android:1dfd4482b2725e08",
+        "android_client_info": {
+          "package_name": "br.inf.combustivelemconta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247764077631-atljklhqvcg0lpvbo2bdpssh6oai2m57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE23AcMGoynL5WAv8Ug_tBF2r_ur8rbds"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

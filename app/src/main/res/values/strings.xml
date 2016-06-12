@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">CombustivelEmConta</string>
+    <string name="app_name">Combustivel Em Conta</string>
+    <string name="facebook_app_id">251498011881921</string>
+    <string name="login_activity">Login Activity</string>
+    <string name="login_dialog_title">Aguarde</string>
+    <string name="login_dialog_content">Efetuando login...</string>
+    <string name="logged_in">Login realizado.</string>
+    <string name="logged_out">Logout realizado.</string>
 </resources>
