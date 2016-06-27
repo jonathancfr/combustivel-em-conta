@@ -10,14 +10,11 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.twitter.sdk.android.core.TwitterAuthConfig;
+//import com.twitter.sdk.android.core.TwitterAuthConfig;
 
 import br.inf.combustivelemconta.R;
 import br.inf.combustivelemconta.application.Constants;
-import br.inf.combustivelemconta.utils.SnackbarUtils;
-import br.inf.combustivelemconta.utils.authentication.FacebookLogin;
 import br.inf.combustivelemconta.utils.authentication.GoogleLogin;
-import br.inf.combustivelemconta.utils.authentication.TwitterLogin;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -28,8 +25,6 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     private GoogleLogin mGoogleLogin;
-    private FacebookLogin mFacebookLogin;
-    private TwitterLogin mTwitterLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,8 +96,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginFacebook() {
-        mFacebookLogin = new FacebookLogin(this, mAuth);
-        mFacebookLogin.signIn();
+
     }
 
     private void loginGoogle() {
@@ -111,8 +105,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginTwitter() {
-        mTwitterLogin = new TwitterLogin(this, mAuth);
-        mTwitterLogin.signIn();
     }
 
     private static class ViewHolder {
@@ -129,11 +121,6 @@ public class LoginActivity extends AppCompatActivity {
             case Constants.GOOGLE_SIGN_IN_REQUEST_CODE:
                 mGoogleLogin.onGoogleSignInResult(requestCode, resultCode, data);
                 break;
-            case TwitterAuthConfig.DEFAULT_AUTH_REQUEST_CODE:
-                mTwitterLogin.onTwitterSignInResult(requestCode, resultCode, data);
-                break;
-            default:
-                mFacebookLogin.onFacebookSignInResult(requestCode, resultCode, data);
         }
     }
 }
