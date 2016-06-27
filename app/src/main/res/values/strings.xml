@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Combustivel Em Conta</string>
+    <string name="app_name">Combustível em Conta</string>
     <string name="facebook_app_id">251498011881921</string>
     <string name="login_activity">Login Activity</string>
     <string name="login_dialog_title">Aguarde</string>
