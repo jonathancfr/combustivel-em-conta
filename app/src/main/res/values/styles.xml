@@ -13,4 +13,16 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.GasStationListLayout" parent="AppTheme.NoActionBar">
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="SearchCardLayout">
+
+
+    </style>
+
+    <style name="SearchCard">
+    </style>
+
 </resources>
