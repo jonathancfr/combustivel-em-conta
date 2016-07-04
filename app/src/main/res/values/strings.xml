@@ -8,4 +8,8 @@
     <string name="logged_out">Logout realizado.</string>
     <string name="title_activity_maps">Map</string>
     <string name="add">Add</string>
+    <string name="gasoline">Comum</string>
+    <string name="additive">Aditivada</string>
+    <string name="ethanol">Etanol</string>
+    <string name="diesel">Disel</string>
 </resources>

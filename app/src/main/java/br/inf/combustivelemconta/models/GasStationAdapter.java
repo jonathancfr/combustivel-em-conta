@@ -29,7 +29,7 @@ public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.Vi
 
         @Override
         public void onClick(View v) {
-            Log.d("CLICKEDDDD", "MENSAGEM DOIDONA");
+            Log.d("CLICKEDDDD", "CARD");
         }
     }
 
