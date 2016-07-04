@@ -1,10 +1,13 @@
 package br.inf.combustivelemconta.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
 
@@ -16,6 +19,8 @@ public class GasStationListActivity extends AppCompatActivity {
 
     private static final String TAG = "GasStationListActivity";
     private ViewHolder mHolder;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<GasStation> gasStationList = new ArrayList<>();
 
     @Override
@@ -48,18 +53,30 @@ public class GasStationListActivity extends AppCompatActivity {
         mHolder = new ViewHolder();
 
         // Recycler View
-        mHolder.mRecyclerView = (RecyclerView) findViewById(R.id.gas_stations_recycler_view);
-        mHolder.mAdapter = new GasStationAdapter(gasStationList);
-        mHolder.mRecyclerView.setHasFixedSize(true);
-        mHolder.mLayoutManager = new LinearLayoutManager(this);
-        mHolder.mRecyclerView.setLayoutManager(mHolder.mLayoutManager);
-        mHolder.mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mHolder.mRecyclerView.setAdapter(mHolder.mAdapter);
+        mHolder.recyclerView = (RecyclerView) findViewById(R.id.gas_stations_recycler_view);
+        mAdapter = new GasStationAdapter(gasStationList);
+        mHolder.recyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mHolder.recyclerView.setLayoutManager(mLayoutManager);
+        mHolder.recyclerView.setItemAnimator(new DefaultItemAnimator());
+        mHolder.recyclerView.setAdapter(mAdapter);
+
+        mHolder.settings = (ImageButton) findViewById(R.id.settings);
+        mHolder.settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startSettingsActivity();
+            }
+        });
+    }
+
+    private void startSettingsActivity() {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 
     private static class ViewHolder {
-        RecyclerView mRecyclerView;
-        RecyclerView.Adapter mAdapter;
-        RecyclerView.LayoutManager mLayoutManager;
+        RecyclerView recyclerView;
+        ImageButton settings;
     }
 }
