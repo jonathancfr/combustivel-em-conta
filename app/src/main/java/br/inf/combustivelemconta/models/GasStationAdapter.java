@@ -1,7 +1,6 @@
 package br.inf.combustivelemconta.models;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +37,7 @@ public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.gas_station_list_item, parent, false);
+                .inflate(R.layout.item_gas_station, parent, false);
 
         return new ViewHolder(itemView);
     }

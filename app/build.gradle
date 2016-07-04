@@ -37,8 +37,8 @@ dependencies {
     compile 'com.google.firebase:firebase-core:9.0.2'
     compile 'com.google.firebase:firebase-auth:9.0.2'
     compile 'com.google.firebase:firebase-storage:9.0.2'
-    compile 'com.google.android.gms:play-services-auth:9.0.2'
     compile 'com.google.android.gms:play-services:9.0.2'
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.5.0'
 }
 
 
