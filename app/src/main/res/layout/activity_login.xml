@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:src="@mipmap/logo"
+        android:src="@drawable/logo"
         android:layout_gravity="center"
         android:layout_weight="2"/>
 
@@ -27,8 +27,8 @@
             android:id="@+id/login_facebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/facebook"
-            android:background="@mipmap/facebook"/>
+            android:src="@drawable/facebook"
+            android:background="@drawable/facebook"/>
 
         <Button
             android:id="@+id/login_google"
@@ -36,13 +36,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:layout_marginBottom="14dp"
-            android:background="@mipmap/google"/>
+            android:background="@drawable/google"/>
 
         <Button
             android:id="@+id/login_twitter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/twitter"/>
+            android:background="@drawable/twitter"/>
 
     </LinearLayout>
 
