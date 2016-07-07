@@ -14,12 +14,10 @@
         <item name="android:padding">0dp</item>
     </style>
 
-    <style name="SearchCardLayout">
-
-
-    </style>
-
-    <style name="SearchCard">
+    <style name="AppTheme.GasStationListLayout.Price">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
 </resources>

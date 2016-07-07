@@ -1,6 +1,7 @@
 package br.inf.combustivelemconta.models;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,11 +23,13 @@ public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.Vi
             super(view);
             name = (TextView) view.findViewById(R.id.gas_station_name);
             address = (TextView) view.findViewById(R.id.gas_station_address);
+
+            view.setOnClickListener(this);
         }
 
         @Override
-        public void onClick(View view) {
-
+        public void onClick(View v) {
+            Log.d("CLICKEDDDD", "CARD");
         }
     }
 
