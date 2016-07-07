@@ -67,13 +67,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+<<<<<<< HEAD
         android:layout_margin="8dp"
         app:cardUseCompatPadding="true"
         card_view:contentPadding="12dp">
+=======
+        android:layout_margin="8dp">
+>>>>>>> eduardodx-develop
 
         <RelativeLayout
             style="@style/SearchCardLayout"
             android:layout_width="match_parent"
+<<<<<<< HEAD
             android:layout_height="wrap_content">
 
             <ImageButton
@@ -83,6 +88,12 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:background="@drawable/search" />
+=======
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:cardUseCompatPadding="true"
+            card_view:contentPadding="12dp">
+>>>>>>> eduardodx-develop
 
             <ImageButton
                 android:id="@+id/settings"

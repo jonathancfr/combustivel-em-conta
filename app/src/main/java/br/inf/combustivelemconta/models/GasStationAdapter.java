@@ -22,11 +22,13 @@ public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.Vi
             super(view);
             name = (TextView) view.findViewById(R.id.gas_station_name);
             address = (TextView) view.findViewById(R.id.gas_station_address);
+
+            view.setOnClickListener(this);
         }
 
         @Override
-        public void onClick(View view) {
-
+        public void onClick(View v) {
+            Log.d("CLICKEDDDD", "CARD");
         }
     }
 
