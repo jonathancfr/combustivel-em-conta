@@ -61,13 +61,13 @@ public class GasStationListActivity extends AppCompatActivity {
         mHolder.recyclerView.setItemAnimator(new DefaultItemAnimator());
         mHolder.recyclerView.setAdapter(mAdapter);
 
-        mHolder.settings = (ImageButton) findViewById(R.id.settings);
-        mHolder.settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startSettingsActivity();
-            }
-        });
+//        mHolder.settings = (ImageButton) findViewById(R.id.settings);
+//        mHolder.settings.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startSettingsActivity();
+//            }
+//        });
     }
 
     private void startSettingsActivity() {
