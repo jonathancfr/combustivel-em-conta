@@ -1,4 +1,4 @@
-package br.inf.combustivelemconta.models;
+package br.inf.combustivelemconta.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import br.inf.combustivelemconta.R;
+import br.inf.combustivelemconta.models.GasStation;
 
 public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.ViewHolder> {
 

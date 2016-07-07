@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import br.inf.combustivelemconta.R;
 import br.inf.combustivelemconta.models.GasStation;
-import br.inf.combustivelemconta.models.GasStationAdapter;
+import br.inf.combustivelemconta.adapters.GasStationAdapter;
 
 public class GasStationListActivity extends AppCompatActivity {
 
