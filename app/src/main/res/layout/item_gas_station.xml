@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardView="http://schemas.android.com/apk/res-auto"
     android:id="@+id/gas_station_card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     android:gravity="center_vertical"
     cardView:contentPadding="8dp"
-    android:layout_margin="4dp">
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
 
     <!-- DIVISOR -->
     <LinearLayout
@@ -21,6 +23,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:layout_weight=".5">
 
             <TextView
@@ -46,9 +49,26 @@
                 android:layout_below="@+id/gas_station_address"
                 android:text="Text3" />
 
+            <TextView
+                android:id="@+id/fuel_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Text4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fuel_price"
+                android:layout_alignParentEnd="true"
+                android:text="Text5" />
+
         </RelativeLayout>
 
-        <!-- Other Prices -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"/>
 
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -58,7 +78,7 @@
             android:layout_weight=".5"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:weightSum="1">
 
             <RelativeLayout
@@ -66,8 +86,8 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                >
+                android:layout_weight=".30"
+                android:layout_centerInParent="true">
 
                 <TextView
                     android:id="@+id/fuel_1_price"
@@ -77,15 +97,14 @@
                     android:text="Hello"
                     android:textAlignment="center"
                     android:layout_centerHorizontal="true"
-                    android:gravity="center|center_vertical"
-                    style="@style/AppTheme.GasStationListLayout.Price" />
+                    android:gravity="center|center_vertical" />
 
                 <TextView
                     android:id="@+id/fuel_1_type"
                     android:layout_below="@+id/fuel_1_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/gasoline"
+                    android:text="Aditivada"
                     android:textAlignment="center"
                     android:layout_centerHorizontal="true"
                     android:gravity="center|center_vertical" />
@@ -93,9 +112,11 @@
 
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25">
+                android:layout_weight=".30"
+                android:layout_centerInParent="true">
 
                 <TextView
                     android:id="@+id/fuel_2_price"
@@ -105,15 +126,14 @@
                     android:text="Hello"
                     android:textAlignment="center"
                     android:layout_centerHorizontal="true"
-                    android:gravity="center|center_vertical"
-                    style="@style/AppTheme.GasStationListLayout.Price" />
+                    android:gravity="center|center_vertical" />
 
                 <TextView
                     android:id="@+id/fuel_2_type"
                     android:layout_below="@+id/fuel_2_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/additive"
+                    android:text="Aditivada"
                     android:textAlignment="center"
                     android:layout_centerHorizontal="true"
                     android:gravity="center|center_vertical" />
@@ -121,10 +141,11 @@
 
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                >
+                android:layout_weight=".30"
+                android:layout_centerInParent="true">
 
                 <TextView
                     android:id="@+id/fuel_3_price"
@@ -134,242 +155,38 @@
                     android:text="Hello"
                     android:textAlignment="center"
                     android:layout_centerHorizontal="true"
-                    android:gravity="center|center_vertical"
-                    style="@style/AppTheme.GasStationListLayout.Price" />
+                    android:gravity="center|center_vertical" />
 
                 <TextView
                     android:id="@+id/fuel_3_type"
                     android:layout_below="@+id/fuel_3_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ethanol"
+                    android:text="Aditivada"
                     android:textAlignment="center"
                     android:layout_centerHorizontal="true"
                     android:gravity="center|center_vertical" />
             </RelativeLayout>
 
-            <Button
-                android:id="@+id/button"
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello"/>
+                android:layout_weight=".10"
+                android:gravity="right">
 
-            <!--<RelativeLayout-->
-                <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-                <!--xmlns:tools="http://schemas.android.com/tools"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_weight=".25"-->
-                <!--&gt;-->
+                <ImageButton
+                    android:id="@+id/gas_station_add_price_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center|center_vertical"
+                    android:src="@drawable/add_price"
+                    style="@style/Base.Widget.AppCompat.ActionButton"
+                    android:contentDescription="@string/add" />
+            </RelativeLayout>
 
-                <!--<TextView-->
-                    <!--android:id="@+id/fuel_4_price"-->
-                    <!--android:layout_alignParentTop="true"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="Hello"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:layout_centerHorizontal="true"-->
-                    <!--android:gravity="center|center_vertical"-->
-                    <!--style="@style/AppTheme.GasStationListLayout.Price" />-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/fuel_4_type"-->
-                    <!--android:layout_below="@+id/fuel_4_price"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="@string/diesel"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:layout_centerHorizontal="true"-->
-                    <!--android:gravity="center|center_vertical" />-->
-            <!--</RelativeLayout>-->
         </LinearLayout>
 
     </LinearLayout>
 </android.support.v7.widget.CardView>
-
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-
-    <!--<android.support.v7.widget.CardView-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:cardView="http://schemas.android.com/apk/res-auto"-->
-    <!--android:id="@+id/gas_station_card_view"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:gravity="center_vertical"-->
-    <!--cardView:contentPadding="8dp"-->
-    <!--android:layout_margin="4dp">-->
-
-    <!--&lt;!&ndash; DIVISOR &ndash;&gt;-->
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:orientation="vertical"-->
-    <!--android:weightSum="1">-->
-
-    <!--&lt;!&ndash; GasStation info and Price &ndash;&gt;-->
-    <!--<RelativeLayout-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight=".5">-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/gas_station_name"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentStart="true"-->
-    <!--android:text="Text1" />-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/gas_station_address"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentStart="true"-->
-    <!--android:layout_below="@+id/gas_station_name"-->
-    <!--android:text="Text2" />-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/gas_station_distance"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentStart="true"-->
-    <!--android:layout_below="@+id/gas_station_address"-->
-    <!--android:text="Text3" />-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/fuel_price"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentEnd="true"-->
-    <!--android:text="Text4" />-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/fuel_updated_at"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_below="@+id/fuel_price"-->
-    <!--android:layout_alignParentEnd="true"-->
-    <!--android:text="Text5" />-->
-
-    <!--</RelativeLayout>-->
-
-    <!--&lt;!&ndash; Other Prices &ndash;&gt;-->
-
-    <!--<LinearLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight=".5"-->
-    <!--android:orientation="horizontal"-->
-    <!--android:gravity="center"-->
-    <!--android:layout_marginTop="4dp"-->
-    <!--android:weightSum="1">-->
-
-    <!--<RelativeLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight=".25"-->
-    <!--&gt;-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/fuel_1_price"-->
-    <!--android:layout_alignParentTop="true"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Hello"-->
-    <!--android:textAlignment="center"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:gravity="center|center_vertical" />-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/fuel_1_type"-->
-    <!--android:layout_below="@+id/fuel_1_price"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Aditivada"-->
-    <!--android:textAlignment="center"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:gravity="center|center_vertical" />-->
-    <!--</RelativeLayout>-->
-
-    <!--<RelativeLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight=".25"-->
-    <!--&gt;-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/fuel_2_price"-->
-    <!--android:layout_alignParentTop="true"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Hello"-->
-    <!--android:textAlignment="center"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:gravity="center|center_vertical" />-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/fuel_2_type"-->
-    <!--android:layout_below="@+id/fuel_2_price"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Aditivada"-->
-    <!--android:textAlignment="center"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:gravity="center|center_vertical" />-->
-    <!--</RelativeLayout>-->
-
-    <!--<RelativeLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight=".25"-->
-    <!--&gt;-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/fuel_3_price"-->
-    <!--android:layout_alignParentTop="true"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Hello"-->
-    <!--android:textAlignment="center"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:gravity="center|center_vertical" />-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/fuel_3_type"-->
-    <!--android:layout_below="@+id/fuel_3_price"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Aditivada"-->
-    <!--android:textAlignment="center"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:gravity="center|center_vertical" />-->
-    <!--</RelativeLayout>-->
-
-    <!--<RelativeLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight=".25">-->
-
-    <!--<ImageButton-->
-    <!--android:id="@+id/gas_station_add_price"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:gravity="center|center_vertical"-->
-    <!--android:background="@drawable/ic_add_black_24dp"-->
-    <!--android:contentDescription="@string/add" />-->
-    <!--</RelativeLayout>-->
-
-    <!--</LinearLayout>-->
-
-    <!--</LinearLayout>-->
-    <!--</android.support.v7.widget.CardView>-->

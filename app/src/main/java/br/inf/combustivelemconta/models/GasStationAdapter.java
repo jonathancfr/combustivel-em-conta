@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,13 +20,13 @@ public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.Vi
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView name;
         public TextView address;
-        public Button button;
+        public ImageButton button;
 
         public ViewHolder(View view) {
             super(view);
             name = (TextView) view.findViewById(R.id.gas_station_name);
             address = (TextView) view.findViewById(R.id.gas_station_address);
-            button = (Button) view.findViewById(R.id.button);
+            button = (ImageButton) view.findViewById(R.id.gas_station_add_price_button);
 
             view.setOnClickListener(this);
         }
