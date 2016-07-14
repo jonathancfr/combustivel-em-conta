@@ -53,7 +53,9 @@ public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.Vi
     public void onBindViewHolder(ViewHolder holder, int position) {
         GasStation gasStation = gasStationList.get(position);
 
-        holder.name.setText(gasStation.getName());
+        String presentationName = (position + 1) + ". " + gasStation.getName();
+
+        holder.name.setText(presentationName);
         holder.address.setText(gasStation.getAddress());
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
