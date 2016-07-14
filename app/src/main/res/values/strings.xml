@@ -18,4 +18,11 @@
         <item>Mais próximos</item>
         <item>Mais baratos</item>
     </string-array>
+
+    <string-array name="gas_station_type_arrays">
+        <item>Comum</item>
+        <item>Aditivada</item>
+        <item>Etanol</item>
+        <item>Disel</item>
+    </string-array>
 </resources>

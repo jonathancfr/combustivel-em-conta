@@ -34,38 +34,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/filters_background"
-                android:padding="14dp">
-
+                android:padding="12dp">
 
                 <android.support.v7.widget.AppCompatSpinner
                     android:id="@+id/gas_stations_select_order"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
                     android:entries="@array/gas_station_order_arrays"
                     />
 
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_alignParentStart="true"-->
-                    <!--android:gravity="start"-->
-                    <!--android:text="Mais próximos"/>-->
-
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_alignParentEnd="true"-->
-                    <!--android:text="Comum"/>-->
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/gas_stations_select_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:entries="@array/gas_station_type_arrays"
+                    />
 
             </RelativeLayout>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/gas_stations_recycler_view"
-                android:layout_marginTop="8dp"
+                android:paddingTop="32dp"
                 android:clipToPadding="false"
                 android:scrollbars="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
+
         </LinearLayout>
     </LinearLayout>
 
