@@ -1,9 +1,12 @@
 package br.inf.combustivelemconta.adapters;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -18,16 +21,20 @@ public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.Vi
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView name;
         public TextView address;
+        public ImageButton button;
 
         public ViewHolder(View view) {
             super(view);
             name = (TextView) view.findViewById(R.id.gas_station_name);
             address = (TextView) view.findViewById(R.id.gas_station_address);
+            button = (ImageButton) view.findViewById(R.id.gas_station_add_price_button);
+
+            view.setOnClickListener(this);
         }
 
         @Override
-        public void onClick(View view) {
-
+        public void onClick(View v) {
+            Log.d("CLICKEDDDD", "CARD");
         }
     }
 
@@ -49,6 +56,12 @@ public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.Vi
 
         holder.name.setText(gasStation.getName());
         holder.address.setText(gasStation.getAddress());
+        holder.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("CLICKED", "BUTTON");
+            }
+        });
     }
 
     @Override
