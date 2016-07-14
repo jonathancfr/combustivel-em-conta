@@ -1,107 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:orientation="vertical"
+    tools:context=".activities.SettingsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
         android:orientation="vertical">
 
-
-        <TextView
+        <com.devspark.robototextview.widget.RobotoTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_vertical_margin"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="GERAL"
-            android:textColor="@android:color/holo_blue_light" />
+            android:layout_marginStart="18dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:typeface="roboto_medium"
+            android:text="GERAL"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/darker_gray"/>
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/divider" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_margin="18dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
-                android:src="@drawable/ic_star_rate"/>
-
-            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Avalie este aplicativo :)"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:textAllCaps="false"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:src="@drawable/ic_star_rate" />
 
-            </LinearLayout>
+            <com.devspark.robototextview.widget.RobotoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="14dp"
+                android:textSize="14dp"
+                app:typeface="roboto_regular"
+                android:textColor="@color/textPrimary"
+                android:text="Avalie este aplicativo :)"/>
+
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="14dp"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
-                android:src="@drawable/ic_favorite"/>
+                android:src="@drawable/ic_favorite" />
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Remover favoritos"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:textAllCaps="false"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:textAllCaps="false" />
 
-            </LinearLayout>
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp">
 
             <ImageView
                 android:id="@+id/notification_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_margin=""
-                android:src="@drawable/ic_notifications"/>
+                android:src="@drawable/ic_notifications" />
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
-                android:layout_toRightOf="@+id/notification_icon"
                 android:text="Notificações gerais"
                 android:textAllCaps="false"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:layout_toRightOf="@id/notification_icon"/>
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/activity_vertical_margin"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_alignParentRight="true"
-                android:backgroundTint="@color/wallet_holo_blue_light"/>
-            </RelativeLayout>
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/colorPrimary" />
 
+        </RelativeLayout>
 
 
     </LinearLayout>
@@ -109,65 +102,58 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
         android:orientation="vertical">
-
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_vertical_margin"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:layout_marginStart="14dp"
             android:text="OUTROS"
-            android:textColor="@android:color/holo_blue_light" />
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/darker_gray"/>
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/divider" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="14dp"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
-                android:src="@drawable/ic_email"/>
+                android:src="@drawable/ic_email" />
 
-            <Button
+            <TextView
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fale conosco"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:textAllCaps="false"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:text="Fale conosco" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="14dp"
             android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:layout_marginLeft="@dimen/activity_vertical_margin"
-                android:src="@drawable/ic_exit"/>
+                android:src="@drawable/ic_exit" />
 
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Encerrar sessão"
-                android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:textAllCaps="false"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:textAllCaps="false" />
         </LinearLayout>
-
     </LinearLayout>
 </LinearLayout>
