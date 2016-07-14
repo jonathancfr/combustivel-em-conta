@@ -5,9 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.MenuInflater;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.support.v7.widget.AppCompatSpinner;
 
 import java.util.ArrayList;
 
@@ -68,6 +74,23 @@ public class GasStationListActivity extends AppCompatActivity {
                 startSettingsActivity();
             }
         });
+
+        mHolder.selectOrder = (AppCompatSpinner) findViewById(R.id.gas_stations_select_order);
+        addListenerOnSpinnerItemSelection();
+    }
+
+    public void addListenerOnSpinnerItemSelection() {
+        mHolder.selectOrder.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("SPINNER", "SELECTED");
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     private void startSettingsActivity() {
@@ -78,5 +101,6 @@ public class GasStationListActivity extends AppCompatActivity {
     private static class ViewHolder {
         RecyclerView recyclerView;
         ImageButton settings;
+        AppCompatSpinner selectOrder;
     }
 }

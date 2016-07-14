@@ -13,4 +13,9 @@
     <string name="additive">Aditivada</string>
     <string name="ethanol">Etanol</string>
     <string name="diesel">Disel</string>
+
+    <string-array name="gas_station_order_arrays">
+        <item>Mais próximos</item>
+        <item>Mais baratos</item>
+    </string-array>
 </resources>
