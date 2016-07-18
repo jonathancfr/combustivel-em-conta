@@ -13,4 +13,14 @@
     <string name="additive">Aditivada</string>
     <string name="ethanol">Etanol</string>
     <string name="diesel">Disel</string>
+    <string name="avalie_este_aplicativo">Avalie este aplicativo :)</string>
+    <string name="fale_conosco">Fale conosco</string>
+    <string name="encerrar_sess_o">Encerrar sessão</string>
+    <string name="notifica_es_gerais">Notificações gerais</string>
+    <string name="remover_favoritos">Remover favoritos</string>
+    <string name="geral">GERAL</string>
+    <string name="outros">OUTROS</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="infos">Sobre</string>
+    <string name="info_text">Os combustíveis sofrem alta variação de preço entre postos, portanto o Combustível em Conta é uma rede social para que motoristas compartilhem preços de combustíveis dos postos e possam encontrar qual o posto mais próximo com o combustível mais barato.</string>
 </resources>
