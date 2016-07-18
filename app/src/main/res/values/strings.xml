@@ -25,4 +25,5 @@
         <item>Etanol</item>
         <item>Disel</item>
     </string-array>
+    <string name="title_activity_gas_station">GasStation</string>
 </resources>

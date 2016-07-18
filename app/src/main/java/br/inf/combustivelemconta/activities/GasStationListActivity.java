@@ -15,6 +15,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.support.v7.widget.AppCompatSpinner;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.NoSubscriberEvent;
+import org.greenrobot.eventbus.Subscribe;
+
 import java.util.ArrayList;
 
 import br.inf.combustivelemconta.R;
@@ -78,6 +82,41 @@ public class GasStationListActivity extends AppCompatActivity {
         mHolder.selectOrder = (AppCompatSpinner) findViewById(R.id.gas_stations_select_order);
         addListenerOnSpinnerItemSelection();
     }
+
+    public void onStart() {
+        super.onStart();
+
+        if ( ! EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    public void onResume() {
+        super.onResume();
+
+        if ( ! EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    public void onDestroy() {
+        if (EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().unregister(this);
+        }
+        super.onDestroy();
+    }
+
+    @Subscribe
+    public void onEvent(GasStation gasStation) {
+        EventBus.getDefault().unregister(this);
+
+        EventBus.getDefault().postSticky(gasStation);
+        Intent intent = new Intent(this, GasStationActivity.class);
+        startActivity(intent);
+    };
+
+    @Subscribe
+    public void onAnything(NoSubscriberEvent randomEvent) {}
 
     public void addListenerOnSpinnerItemSelection() {
         mHolder.selectOrder.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

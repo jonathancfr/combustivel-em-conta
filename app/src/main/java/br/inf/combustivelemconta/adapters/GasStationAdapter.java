@@ -1,5 +1,6 @@
 package br.inf.combustivelemconta.adapters;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,9 +10,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 
 import br.inf.combustivelemconta.R;
+import br.inf.combustivelemconta.activities.GasStationActivity;
 import br.inf.combustivelemconta.models.GasStation;
 
 public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.ViewHolder> {
@@ -19,6 +23,7 @@ public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.Vi
     private ArrayList<GasStation> gasStationList;
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        public GasStation gasStation;
         public TextView name;
         public TextView address;
         public ImageButton button;
@@ -29,11 +34,15 @@ public class GasStationAdapter extends RecyclerView.Adapter<GasStationAdapter.Vi
             address = (TextView) view.findViewById(R.id.gas_station_address);
             button = (ImageButton) view.findViewById(R.id.gas_station_add_price_button);
 
+            gasStation = new GasStation();
+            gasStation.setName(name.getText().toString());
+
             view.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
+            EventBus.getDefault().post(gasStation);
             Log.d("CLICKEDDDD", "CARD");
         }
     }
