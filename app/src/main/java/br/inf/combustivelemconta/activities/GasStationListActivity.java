@@ -85,25 +85,12 @@ public class GasStationListActivity extends AppCompatActivity {
 
     public void onStart() {
         super.onStart();
-
-        if ( ! EventBus.getDefault().isRegistered(this)) {
-            EventBus.getDefault().register(this);
-        }
+        EventBus.getDefault().register(this);
     }
 
-    public void onResume() {
-        super.onResume();
-
-        if ( ! EventBus.getDefault().isRegistered(this)) {
-            EventBus.getDefault().register(this);
-        }
-    }
-
-    public void onDestroy() {
-        if (EventBus.getDefault().isRegistered(this)) {
-            EventBus.getDefault().unregister(this);
-        }
-        super.onDestroy();
+    public void onStop() {
+        EventBus.getDefault().unregister(this);
+        super.onStop();
     }
 
     @Subscribe

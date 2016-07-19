@@ -41,6 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
+                    style="@style/AppTheme.SpinnerSecondary"
                     android:entries="@array/gas_station_order_arrays"
                     />
 
@@ -49,6 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
+                    style="@style/AppTheme.SpinnerPrimary"
                     android:entries="@array/gas_station_type_arrays"
                     />
 
