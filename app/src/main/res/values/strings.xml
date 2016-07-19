@@ -23,4 +23,6 @@
     <string name="configuracoes">Configurações</string>
     <string name="infos">Sobre</string>
     <string name="info_text">Os combustíveis sofrem alta variação de preço entre postos, portanto o Combustível em Conta é uma rede social para que motoristas compartilhem preços de combustíveis dos postos e possam encontrar qual o posto mais próximo com o combustível mais barato.</string>
+    <string name="comum">Comum</string>
+    <string name="inserir_valor">Inserir preço</string>
 </resources>

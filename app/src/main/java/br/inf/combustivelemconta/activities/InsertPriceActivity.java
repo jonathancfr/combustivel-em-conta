@@ -1,10 +1,7 @@
 package br.inf.combustivelemconta.activities;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -12,14 +9,15 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
-
-import java.util.List;
 
 import br.inf.combustivelemconta.R;
 
-public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
+/**
+ * Created by jonathan on 18/07/16.
+ */
+public class InsertPriceActivity extends AppCompatActivity implements View.OnClickListener {
+
 
     private ViewHolder mHolder;
 
@@ -31,13 +29,13 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void initView() {
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_insert_price);
         mHolder = new ViewHolder();
 
 
         mHolder.toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mHolder.toolbar);
-        mHolder.toolbar.setTitle(getString(R.string.configuracoes));
+        mHolder.toolbar.setTitle(getString(R.string.inserir_valor));
         mHolder.toolbar.setTitleTextColor(Color.WHITE);
         final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         upArrow.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
@@ -52,20 +50,18 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         });
 
 
-        mHolder.rateLayout = findViewById(R.id.rate);
-        mHolder.rateLayout.setOnClickListener(this);
+        mHolder.regular = findViewById(R.id.regular);
+        mHolder.regular.setOnClickListener(this);
 
-        mHolder.removeFavorites = findViewById(R.id.remove_favorites);
-        mHolder.removeFavorites.setOnClickListener(this);
+        //mHolder.additived = findViewById(R.id.remove_favorites);
+        mHolder.additived.setOnClickListener(this);
 
-        mHolder.contactUs = findViewById(R.id.contact_us);
-        mHolder.contactUs.setOnClickListener(this);
+        //mHolder.ethanol = findViewById(R.id.contact_us);
+        mHolder.ethanol.setOnClickListener(this);
 
-        mHolder.info = findViewById(R.id.info);
-        mHolder.info.setOnClickListener(this);
+        //mHolder.diesel = findViewById(R.id.info);
+        mHolder.diesel.setOnClickListener(this);
 
-        mHolder.closeSession = findViewById(R.id.close_session);
-        mHolder.closeSession.setOnClickListener(this);
 
 
     }
@@ -73,8 +69,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.rate: {
-                onClickRate();
+            case R.id.regular: {
+                onClickRegular();
                 break;
             }
             case R.id.remove_favorites: {
@@ -89,14 +85,10 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 onClickInfo();
                 break;
             }
-            case R.id.close_session: {
-                onClickClose();
-                break;
-            }
         }
     }
 
-    private void onClickRate() {
+    private void onClickRegular() {
         System.out.println("on rate");
     }
 
@@ -108,17 +100,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_EMAIL, "emailaddress@emailaddress.com");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
 
-        PackageManager pm = getPackageManager();
-        List<ResolveInfo> matches = pm.queryIntentActivities(intent, 0);
-        ResolveInfo best = null;
-        for (ResolveInfo info : matches)
-            if (info.activityInfo.packageName.endsWith(".gm") ||
-                    info.activityInfo.name.toLowerCase().contains("gmail")) best = info;
-        if (best != null)
-            intent.setClassName(best.activityInfo.packageName, best.activityInfo.name);
-
-        startActivity(intent);
+        startActivity(Intent.createChooser(intent, "Send Email"));
     }
 
     private void onClickInfo() {
@@ -133,17 +117,12 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 }).show();
     }
 
-    private void onClickClose() {
-        System.out.println("close");
-    }
 
     private static class ViewHolder {
-        View rateLayout;
-        View removeFavorites;
-        View contactUs;
-        View info;
-        View closeSession;
+        View regular;
+        View additived;
+        View ethanol;
+        View diesel;
         Toolbar toolbar;
     }
-
 }
